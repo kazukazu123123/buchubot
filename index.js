@@ -6,8 +6,6 @@ const DOMAIN = 'misskey.art'
 const API_BASEURL = `https://${DOMAIN}/`
 const WS_BASEURL = API_BASEURL.replace('http', 'ws')
 
-const TOKEN = 'FH8yRKeuug0WJ1ez54UmIo3vklgKwmtJ'
-
 const buchuArray = [
   'ぶちゅ',
   'ぶちゅぶちゅ',
@@ -21,11 +19,13 @@ const buchuArray = [
   '😘',
   '💋',
 ]
-const ws = new WebSocket(WS_BASEURL + 'streaming?i=' + TOKEN)
+
+require('dotenv').config()
+
+const ws = new WebSocket(WS_BASEURL + 'streaming?i=' + process.env.TOKEN)
 ws.on('error', console.error)
 
 ws.on('open', function open() {
-  //ws.send('something')
   console.log('Realtime Stream Connected!')
   ws.send(
     JSON.stringify({
@@ -59,7 +59,7 @@ ws.on('message', function message(data) {
     console.log('Follow backing...')
     axios
       .post(API_BASEURL + 'api/following/create', {
-        i: TOKEN,
+        i: process.env.TOKEN,
         userId: jsonData.body.body.userId,
       })
       .then(() => {
@@ -85,12 +85,12 @@ ws.on('message', function message(data) {
   }
 })
 
-cron.schedule('0/10 0 * * * *', () => {
+cron.schedule('*/10 * * * *', () => {
   const buchuRandom = buchuArray[Math.floor(Math.random() * buchuArray.length)]
   console.log('Posting buchu...')
   axios
     .post(API_BASEURL + 'api/notes/create', {
-      i: TOKEN,
+      i: process.env.TOKEN,
       text: buchuRandom,
       visibility: 'public',
       localOnly: true,
