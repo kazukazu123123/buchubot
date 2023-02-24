@@ -48,7 +48,7 @@ ws.on('open', function open() {
 })
 
 ws.on('message', function message(data) {
-  console.log(JSON.parse(data))
+  //console.log(JSON.parse(data))
   const jsonData = JSON.parse(data)
   if (
     jsonData.body.type === 'notification' &&
@@ -72,8 +72,8 @@ ws.on('message', function message(data) {
       })
   }
   if (jsonData.body.type === 'note' && jsonData.body.body.id) {
-    console.log('Got new note')
-    console.log('Subscribing...')
+    /*console.log('Got new note')
+    console.log('Subscribing...')*/
     ws.send(
       JSON.stringify({
         type: 'subNote',
