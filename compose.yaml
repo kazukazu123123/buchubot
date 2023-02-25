@@ -5,3 +5,4 @@ services:
     build: .
     pull_policy: always
     restart: always
+
