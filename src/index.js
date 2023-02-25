@@ -6,6 +6,8 @@ const DOMAIN = 'misskey.art'
 const API_BASEURL = `https://${DOMAIN}/`
 const WS_BASEURL = API_BASEURL.replace('http', 'ws')
 
+console.log('BuchuBot Started.')
+
 const buchuArray = [
   'ぶちゅ',
   'ぶちゅぶちゅ',
@@ -19,8 +21,6 @@ const buchuArray = [
   '😘',
   '💋',
 ]
-
-require('dotenv').config()
 
 const ws = new WebSocket(WS_BASEURL + 'streaming?i=' + process.env.TOKEN)
 ws.on('error', console.error)
