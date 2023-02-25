@@ -7,6 +7,23 @@ const API_BASEURL = `https://${DOMAIN}/`
 const WS_BASEURL = API_BASEURL.replace('http', 'ws')
 
 console.log('BuchuBot Started.')
+console.log("Posting start message...")
+
+axios
+.post(API_BASEURL + 'api/notes/create', {
+  i: process.env.TOKEN,
+  text: "起動しました。",
+  visibility: 'public',
+  localOnly: true,
+})
+.then(() => {
+  console.log('Start message post success!')
+})
+.catch((error) => {
+  console.log(
+    `Start message post Failed: ${error.response.status} ${error.response.statusText}`,
+  )
+})
 
 const buchuArray = [
   'ぶちゅ',
