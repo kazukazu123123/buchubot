@@ -10,7 +10,7 @@ console.log('BuchuBot Started.')
 console.log('Posting start message...')
 
 axios
-  .post(API_BASEURL + 'api/notes/create', {
+  .post(`${API_BASEURL}api/notes/create`, {
     i: process.env.TOKEN,
     text: '起動しました。',
     visibility: 'public',
@@ -39,7 +39,7 @@ const buchuArray = [
   '💋',
 ]
 
-const ws = new WebSocket(WS_BASEURL + 'streaming?i=' + process.env.TOKEN)
+const ws = new WebSocket(`${WS_BASEURL}streaming?i=${process.env.TOKEN}`)
 ws.on('error', console.error)
 
 ws.on('open', function open() {
@@ -72,10 +72,10 @@ ws.on('message', function message(data) {
     jsonData.body.body.type === 'follow'
   ) {
     const followedUsername = jsonData.body.body.user.username
-    console.log('Got follow by: ' + followedUsername)
+    console.log(`Got follow by: ${followedUsername}`)
     console.log('Follow backing...')
     axios
-      .post(API_BASEURL + 'api/following/create', {
+      .post(`${API_BASEURL}api/following/create`, {
         i: process.env.TOKEN,
         userId: jsonData.body.body.userId,
       })
@@ -106,7 +106,7 @@ cron.schedule('*/10 * * * *', () => {
   const buchuRandom = buchuArray[Math.floor(Math.random() * buchuArray.length)]
   console.log('Posting buchu...')
   axios
-    .post(API_BASEURL + 'api/notes/create', {
+    .post(`${API_BASEURL}api/notes/create`, {
       i: process.env.TOKEN,
       text: buchuRandom,
       visibility: 'public',
