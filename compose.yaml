@@ -4,5 +4,4 @@ services:
     container_name: misskey-art-buchubot
     build: .
     pull_policy: always
-    env_file: .env
     restart: always
