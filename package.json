@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node .",
-    "pretty": "prettier --write ."
+    "lint": "rome check .",
+    "lintfix": "rome check --apply-suggested .",
+    "format": "rome format --write ."
   },
   "packageManager": "pnpm@7.28.0",
   "engines": {
@@ -20,6 +22,6 @@
     "ws": "8.12.1"
   },
   "devDependencies": {
-    "prettier": "2.8.4"
+    "rome": "11.0.0"
   }
 }
