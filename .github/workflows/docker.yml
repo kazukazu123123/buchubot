@@ -1,0 +1,49 @@
+name: Create and publish a Docker image
+
+on:
+  push:
+    branches: ['main']
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@f095bcc56b7c2baf48f3ac70d6d6782f4f553222
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@9d429d4c1cda1009cb0bee249cf42bef72a9228d
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@a946f06b5ddbde456d0115dc585e8dc3c7a0c3e0
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@40891eba8c2bcd1309b07ba8b11232f313e86779
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@c4ee3adeed93b1fa6a762f209fb01608c1a22f1e
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@eafaea8d0f5853934deece2ffa67af59d936562b
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
