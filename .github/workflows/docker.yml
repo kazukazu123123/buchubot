@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@96f53100ba2a5449eb71d2e6604bbcd94b9449b5
+        uses: actions/checkout@7739b9ba2efcda9dde65ad1e3c2dbe65b41dfba7
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@61d34a9892a42ed0e88fb4bd0346c17742c45bf7
