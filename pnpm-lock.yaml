@@ -12,8 +12,8 @@ dependencies:
     specifier: 3.0.2
     version: 3.0.2
   ws:
-    specifier: 8.13.0
-    version: 8.13.0
+    specifier: 8.14.0
+    version: 8.14.0
 
 devDependencies:
   rome:
@@ -157,8 +157,8 @@ packages:
     hasBin: true
     dev: false
 
-  /ws@8.13.0:
-    resolution: {integrity: sha512-x9vcZYTrFPC7aSIbj7sRCYo7L/Xb8Iy+pW0ng0wt2vCJv7M9HOMy0UoN3rr+IFC7hb7vXoqS+P9ktyLLLhO+LA==}
+  /ws@8.14.0:
+    resolution: {integrity: sha512-WR0RJE9Ehsio6U4TuM+LmunEsjQ5ncHlw4sn9ihD6RoJKZrVyH9FWV3dmnwu8B2aNib1OvG2X6adUCyFpQyWcg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
