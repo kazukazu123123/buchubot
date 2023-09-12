@@ -22,7 +22,7 @@ jobs:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@4e6079cccbce8813e8e004099e0182f796e69345
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@a52126db3ddbe9872eba76f28f014a43d05b19aa
+        uses: docker/setup-buildx-action@c2153417150d92671c82aea83a1583b776b52910
 
       - name: Log in to the Container registry
         uses: docker/login-action@a5609cb39f57be157c39b77359abfaa43aeaeb8f
