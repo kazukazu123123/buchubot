@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@72f2cec99f417b1a1c5e2e88945068983b7965f9
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@498e799e68b64ef5f9a7dd53225b0b844b48d194
+        uses: docker/setup-qemu-action@326560df218a7ea9cf6ab49bbc88b8b306bb437e
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@7d508e5a8aea0b90e8e3f5896025bbdd294cfd9a
 
