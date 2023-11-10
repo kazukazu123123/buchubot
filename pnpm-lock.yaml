@@ -9,8 +9,8 @@ dependencies:
     specifier: 1.6.0
     version: 1.6.0
   node-cron:
-    specifier: 3.0.2
-    version: 3.0.2
+    specifier: 3.0.3
+    version: 3.0.3
   ws:
     specifier: 8.14.2
     version: 8.14.2
@@ -147,8 +147,8 @@ packages:
       mime-db: 1.52.0
     dev: false
 
-  /node-cron@3.0.2:
-    resolution: {integrity: sha512-iP8l0yGlNpE0e6q1o185yOApANRe47UPbLf4YxfbiNHt/RU5eBcGB/e0oudruheSf+LQeDMezqC5BVAb5wwRcQ==}
+  /node-cron@3.0.3:
+    resolution: {integrity: sha512-dOal67//nohNgYWb+nWmg5dkFdIwDm8EpeGYMekPMrngV3637lqnX0lbUcCtgibHTz6SEz7DAIjKvKDFYCnO1A==}
     engines: {node: '>=6.0.0'}
     dependencies:
       uuid: 8.3.2
