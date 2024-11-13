@@ -9,7 +9,7 @@
     "lintfix": "rome check --apply-suggested .",
     "format": "rome format --write ."
   },
-  "packageManager": "pnpm@9.12.3",
+  "packageManager": "pnpm@9.13.0",
   "engines": {
     "npm": "This project is configured to use pnpm"
   },
