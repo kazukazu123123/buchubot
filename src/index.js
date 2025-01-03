@@ -6,6 +6,11 @@ const DOMAIN = 'misskey.art'
 const API_BASEURL = `https://${DOMAIN}/`
 const WS_BASEURL = API_BASEURL.replace('http', 'ws')
 
+if (!process.env.TOKEN || process.env.TOKEN.trim() === '') {
+  console.log('Error: TOKEN not set or empty.')
+  process.exit(1)
+}
+
 console.log('BuchuBot Started.')
 console.log('Posting start message...')
 
