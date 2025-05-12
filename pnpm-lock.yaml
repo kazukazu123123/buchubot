@@ -12,8 +12,8 @@ importers:
         specifier: 1.9.0
         version: 1.9.0
       node-cron:
-        specifier: 3.0.3
-        version: 3.0.3
+        specifier: 4.0.3
+        version: 4.0.3
       ws:
         specifier: 8.18.2
         version: 8.18.2
@@ -167,16 +167,12 @@ packages:
     resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==}
     engines: {node: '>= 0.6'}
 
-  node-cron@3.0.3:
-    resolution: {integrity: sha512-dOal67//nohNgYWb+nWmg5dkFdIwDm8EpeGYMekPMrngV3637lqnX0lbUcCtgibHTz6SEz7DAIjKvKDFYCnO1A==}
+  node-cron@4.0.3:
+    resolution: {integrity: sha512-YPEUlbYGgpfN44OtCm4KkK4TXjeIB4arERbDWP7kJgM+QHFK9AdM6/3bp4M3oB1QBrL5INyTRLAPei87j49foA==}
     engines: {node: '>=6.0.0'}
 
   proxy-from-env@1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
-
-  uuid@8.3.2:
-    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
-    hasBin: true
 
   ws@8.18.2:
     resolution: {integrity: sha512-DMricUmwGZUVr++AEAe2uiVM7UoO9MAVZMDu05UQOaUII0lp+zOzLLU4Xqh/JvTqklB1T4uELaaPBKyjE1r4fQ==}
@@ -318,12 +314,8 @@ snapshots:
     dependencies:
       mime-db: 1.52.0
 
-  node-cron@3.0.3:
-    dependencies:
-      uuid: 8.3.2
+  node-cron@4.0.3: {}
 
   proxy-from-env@1.1.0: {}
-
-  uuid@8.3.2: {}
 
   ws@8.18.2: {}
