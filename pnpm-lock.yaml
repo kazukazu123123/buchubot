@@ -12,8 +12,8 @@ importers:
         specifier: 1.10.0
         version: 1.10.0
       node-cron:
-        specifier: 4.1.0
-        version: 4.1.0
+        specifier: 4.1.1
+        version: 4.1.1
       ws:
         specifier: 8.18.2
         version: 8.18.2
@@ -167,8 +167,8 @@ packages:
     resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==}
     engines: {node: '>= 0.6'}
 
-  node-cron@4.1.0:
-    resolution: {integrity: sha512-OS+3ORu+h03/haS6Di8Qr7CrVs4YaKZZOynZwQpyPZDnR3tqRbwJmuP2gVR16JfhLgyNlloAV1VTrrWlRogCFA==}
+  node-cron@4.1.1:
+    resolution: {integrity: sha512-oJj9CYV7teeCVs+y2Efi5IQ4FGmAYbsXQOehc1AGLlwteec8pC7DjBCUzSyRQ0LYa+CRCgmD+vtlWQcnPpXowA==}
     engines: {node: '>=6.0.0'}
 
   proxy-from-env@1.1.0:
@@ -315,7 +315,7 @@ snapshots:
     dependencies:
       mime-db: 1.52.0
 
-  node-cron@4.1.0: {}
+  node-cron@4.1.1: {}
 
   proxy-from-env@1.1.0: {}
 
