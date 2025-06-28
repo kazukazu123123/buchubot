@@ -15,8 +15,8 @@ importers:
         specifier: 4.1.1
         version: 4.1.1
       ws:
-        specifier: 8.18.2
-        version: 8.18.2
+        specifier: 8.18.3
+        version: 8.18.3
     devDependencies:
       '@biomejs/biome':
         specifier: 2.0.6
@@ -174,8 +174,8 @@ packages:
   proxy-from-env@1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
 
-  ws@8.18.2:
-    resolution: {integrity: sha512-DMricUmwGZUVr++AEAe2uiVM7UoO9MAVZMDu05UQOaUII0lp+zOzLLU4Xqh/JvTqklB1T4uELaaPBKyjE1r4fQ==}
+  ws@8.18.3:
+    resolution: {integrity: sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -319,4 +319,4 @@ snapshots:
 
   proxy-from-env@1.1.0: {}
 
-  ws@8.18.2: {}
+  ws@8.18.3: {}
