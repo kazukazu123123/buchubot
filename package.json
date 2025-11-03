@@ -22,7 +22,7 @@
     "ws": "8.18.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.2"
+    "@biomejs/biome": "2.3.3"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
